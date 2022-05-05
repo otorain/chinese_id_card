@@ -1,23 +1,17 @@
 # ChineseIdCard
-A Gem for parse and validate personal info in id card no of chinese mainland. It supports 15 and 18 characters long card no.
+一个解析和校验身份证信息的 Gem，支持长度为 15 和 18 位的身份证号。
 
-[中文文档 Chinese document](/README-CN.md)
+## 安装
 
-## Installation
-
-Add this line to your application's Gemfile:
+在 Gemfile 里边添加：
 
 ```ruby
 gem 'chinese_id_card'
 ```
 
-And then execute:
+然后执行:
 
     $ bundle install
-
-Or install it yourself as:
-
-    $ gem install chinese_id_card
 
 ## Usage
 
@@ -27,7 +21,7 @@ valid_card_no = "37142819800508053x"
 card = ChineseIdCard::Card.new(valid_card_no).parse!
 
 p card.age # => 41
-p card.gender # => "male" (The value of gender can be "male" or "female")
+p card.gender # => "male"
 p card.birth_date # => #<Date: 1980-05-08 ((2444368j,0s,0n),+0s,2299161j)>
 
 card_no_with_invalid_length = "37142819800508053x123"

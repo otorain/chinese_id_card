@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require "chinese_id_card"
+require "chinese_id_card/card"
+require "chinese_id_card/card_no_format_invalid_error"
+require "chinese_id_card/card_no_length_invalid_error"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
